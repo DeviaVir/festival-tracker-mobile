@@ -1,0 +1,60 @@
+<side-menus>
+  <pane side-menu-content scroll="true">
+    <header class="bar bar-header bar-assertive">
+      <button class="button button-icon" ng-click="toggleLeft()"><i class="icon ion-navicon"></i></button>
+      <h1 class="title">DefQon.1</h1>
+    </header>
+    <div class="content has-header">
+      <div class="card">
+        <div class="item item-divider">
+          {{mapUserName}}
+        </div>
+        <div class="row">
+          <div class="col col-100 col-center">
+            <leaflet width="100%" height="300px" center="center" markers="markers" geojson="geojson" paths="paths" defaults="defaults"></leaflet>
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <span id="logo"></span>
+      </div>
+    </div>
+  </pane>
+  <side-menu side="left">
+    <header class="bar bar-header bar-assertive">
+      <h1 class="title">Account</h1>
+    </header>
+    <content has-header="true">
+      <ul class="list">
+        <li class="item">
+          {{currentUser.name}}
+        </li>
+        <li>
+          <a href="/#/home" class="item">
+            Home
+          </a>
+        </li>
+        <li ng-repeat="item in options">
+          <a href="#" ng-click="item.action()" class="item">
+            {{item.text}}
+          </a>
+        </li>
+      </ul>
+    </content>
+  </side-menu>
+  <side-menu side="right">
+    <header class="bar bar-header bar-assertive">
+      <h1 class="title">Crew</h1>
+    </header>
+    <content has-header="true">
+      <ul class="list">
+        <li ng-repeat="item in sidebarUsers">
+          <a href="/#/home/{{ item.id }}/{{ item.name }}" class="item">{{ item.name }}</a>
+        </li>
+        <!--<li>
+          <a href="/#/invite" class="item text-center bold">INVITE</a>
+        </li>-->
+      </ul>
+    </content>
+  </side-menu>
+</side-menus>

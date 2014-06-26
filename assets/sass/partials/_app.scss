@@ -1,0 +1,40 @@
+html, body, .pane, .view {
+	background: url('../img/bg.png') repeat #fef7e8;
+}
+#logo {
+	background: url('../img/logo.png') no-repeat transparent 0 0;
+	background-size: 100%;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	display: block;
+}
+.logo {
+	margin-bottom: -20px;
+}
+.bar.bar-assertive {
+	background-color: #cc2b32;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.leaflet-div-icon {
+	background-color: transparent !important;
+	border: 0 !important;
+}
+
+.leaflet-div-icon,
+.leaflet-div-icon-content {
+	width: 10px !important;
+	height: 10px !important;
+	display: block !important;
+	border-radius: 50% !important;
+}
+
+.leaflet-div-icon-content {
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+@import "leaflet";
